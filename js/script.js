@@ -77,6 +77,30 @@ function createViolinPlot(data) {
             .call(d3.axisBottom(x));
     }
 
+    // x-axis label
+    svg.append("text")
+        .attr('x', width / 2)
+        .attr('y', height + margin.bottom - 20)
+        .attr('text-anchor', 'middle')
+        .text("Seasons") // curr x-axis variable
+        .attr('class', 'labels');
+
+    // y-axis label
+    svg.append("text")
+        .attr('transform', 'rotate(-90)')
+        .attr('x', -height/2)
+        .attr('y', -margin.left + 40)
+        .attr('text-anchor', 'middle')
+        .text("Temperature (°F)") // curr y-axis variable
+        .attr('class', 'labels');
+
+    //title
+    svg.append("text")
+        .attr('x', width/2)
+        .attr('y', margin.top - 75)
+        .attr('text-anchor', 'middle')
+        .text('Min/Max Temperature Distribution over the Seasons')
+
     const histogram = d3.histogram()
         .domain(y.domain())
         .thresholds(y.ticks(20)) // Number of bins
