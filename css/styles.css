@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /* background-color: #f4f4f4; */
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+#chart-container {
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+    background: white;
+    /* border: 1px solid #ccc; */
+}
+
+#tooltip {
+    position: absolute; /* move w cursor */ 
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+}
